@@ -1,6 +1,7 @@
 # HTML Beginner Walkthrough – Make a Cup of Tea
 
-> [View Tutorial](https://jordan-bruno.github.io/html-cup-of-tea/) > [View Live Website](https://jordan-bruno.github.io/html-cup-of-tea/pages/example.html)
+[View Tutorial](https://jordan-bruno.github.io/html-cup-of-tea/)
+[View Live Website](https://jordan-bruno.github.io/html-cup-of-tea/pages/example.html)
 
 This repository contains a simple and beginner-friendly HTML page designed to introduce students to the structure and syntax of web pages. The page walks through key concepts such as:
 
