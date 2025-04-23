@@ -1,41 +1,297 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Make a Cup of Tea</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML and CSS Tutorial</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="bg-light text-dark">
+
+  <!-- Sticky Theme Toggle Button -->
+  <div id="themeToggleContainer">
+    <button id="themeToggle" class="btn btn-outline-primary">
+      <i id="themeIcon" class="fas fa-sun"></i>
+    </button>
+  </div>
+
+  <!-- Header -->
+  <header class="container my-5">
+    <h1>HTML Walkthrough</h1>
+    <p class="author-text">
+      By <a href="https://github.com/Jordan-Bruno" target="_blank" class="text-primary">Jordan Bruno</a>
+    </p>
+    <p class="lead">A beginner-friendly HTML page that walks through key elements of web page structure using a simple
+      “Make a Cup of
+      Tea” example.</p>
+    <hr> <!-- Horizontal rule for separation -->
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+
+    <section class="container my-4">
+      <article class="tutorial-step">
+        <h2>HTML Structure</h2>
+        <p>Every HTML document starts with <code>&lt;!DOCTYPE html&gt;</code> to tell the browser it's reading an HTML5
+          file. The whole page sits inside <code>&lt;html&gt;</code>. Inside that, we split the content into a
+          <code>&lt;head&gt;</code> section for meta data and a <code>&lt;body&gt;</code> section for visible content.
+        </p>
+        <p>The <code>&lt;head&gt;</code> can include the title, stylesheets, fonts, or meta tags. The
+          <code>&lt;body&gt;</code> is where all headings, text, images, and other visible parts go.
+        </p>
+        <div class="code-container">
+          <button class="copy-btn" data-target="step1">
+            <i class="fas fa-copy"></i>
+          </button>
+          <textarea readonly id="step1" class="code-block">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Make a Cup of Tea</title>
+  </head>
+  <body>
+    <!-- Page content goes here -->
+  </body>
+</html>
+            </textarea>
+        </div>
+      </article>
+    </section>
+
+    <section class="container my-4">
+      <article class="tutorial-step">
+        <h2>Headings and Text</h2>
+        <p>HTML provides six levels of headings from <code>&lt;h1&gt;</code> (most important) to <code>&lt;h6&gt;</code>
+          (least important). Use headings to give structure and meaning to your page. For regular text, use the
+          <code>&lt;p&gt;</code> tag.
+        </p>
+        <p>Try to use headings in order. Start with one <code>&lt;h1&gt;</code> per page, then use
+          <code>&lt;h2&gt;</code>
+          and lower as needed for subtopics.
+        </p>
+        <div class="code-container">
+          <button class="copy-btn" data-target="step2">
+            <i class="fas fa-copy"></i>
+          </button>
+          <textarea readonly id="step2" class="code-block">
+<h1>How to Make a Cup of Tea</h1>
+<p>Making tea is simple and relaxing.</p>
+            </textarea>
+        </div>
+      </article>
+    </section>
+
+    <section class="container my-4">
+      <article class="tutorial-step">
+        <h2>Line Breaks and Emphasis</h2>
+        <p>To break lines inside a paragraph, use <code>&lt;br /&gt;</code>. Use <code>&lt;em&gt;</code> to italicise
+          text
+          (used for emphasis), and <code>&lt;strong&gt;</code> to bold it (used for importance).</p>
+        <p>These are semantic tags - they also help screen readers know which parts of the text are emphasised or
+          important.
+        </p>
+        <div class="code-container">
+          <button class="copy-btn" data-target="step3">
+            <i class="fas fa-copy"></i>
+          </button>
+          <textarea readonly id="step3" class="code-block">
+<p>Boil water.<br />
+Use a <strong>fresh</strong> teabag.<br />
+Wait and enjoy.</p>
+            </textarea>
+        </div>
+      </article>
+    </section>
+
+    <section class="container my-4">
+      <article class="tutorial-step">
+        <h2>Using &lt;div&gt; and Semantic Elements</h2>
+        <p><code>&lt;div&gt;</code> is a generic container often used to group content. However, HTML also includes
+          semantic
+          tags like <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;main&gt;</code> that help
+          explain the meaning of the content.</p>
+        <p>Try to use semantic tags where possible. They make your code easier to read and better for accessibility and
+          search engines.</p>
+        <div class="code-container">
+          <button class="copy-btn" data-target="step4">
+            <i class="fas fa-copy"></i>
+          </button>
+          <textarea readonly id="step4" class="code-block">
+<div>
+  <h2>Ingredients</h2>
+  <p>You will need water, tea, and milk or sugar (optional).</p>
+</div>
+            </textarea>
+        </div>
+      </article>
+    </section>
+
+    <section class="container my-4">
+      <article class="tutorial-step">
+        <h2>Lists: Ordered and Unordered</h2>
+        <p>Use <code>&lt;ul&gt;</code> (unordered list) for bullet points, and <code>&lt;ol&gt;</code> (ordered list)
+          for
+          steps or rankings. Each item in the list must go inside an <code>&lt;li&gt;</code> (list item) tag.</p>
+        <p>Lists help organise content clearly. Always ensure the structure is correct: the list goes in a
+          <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> and each entry inside is an <code>&lt;li&gt;</code>.
+        </p>
+        <div class="code-container">
+          <button class="copy-btn" data-target="step5">
+            <i class="fas fa-copy"></i>
+          </button>
+          <textarea readonly id="step5" class="code-block">
+<h3>Tools You Need</h3>
+<ul>
+  <li>Kettle</li>
+  <li>Mug</li>
+  <li>Teabag</li>
+</ul>
+
+<h3>Steps</h3>
+<ol>
+  <li>Boil water</li>
+  <li>Place teabag in mug</li>
+  <li>Pour water into mug</li>
+  <li>Wait, then remove teabag</li>
+</ol>
+            </textarea>
+        </div>
+      </article>
+    </section>
+
+    <section class="container my-4">
+      <article class="tutorial-step">
+        <h2>Images and Attributes</h2>
+        <p>Use <code>&lt;img&gt;</code> to display images. Images can be loaded from the internet using a full URL, or
+          locally using a file path. Use the <code>alt</code> attribute to describe the image - this is important for
+          accessibility.</p>
+        <p>Other common image attributes include <code>width</code>, <code>height</code>, and <code>title</code>. It is
+          best
+          practice to resize images using CSS to keep control over layout and design without distorting the image.</p>
+        <div class="code-container">
+          <button class="copy-btn" data-target="step6">
+            <i class="fas fa-copy"></i>
+          </button>
+          <textarea readonly id="step6" class="code-block">
+<img src="https://jordan-bruno.github.io/html-cup-of-tea/assets/images/Tea.jpg" alt="Cup of tea in a patterned mug" width="300" />
+            </textarea>
+        </div>
+      </article>
+    </section>
+
+    <section class="container my-4">
+      <article class="tutorial-step">
+        <h2>Videos and More Attributes</h2>
+        <p>The <code>&lt;video&gt;</code> tag lets you add a video player. Include the <code>controls</code> attribute
+          so
+          users can play, pause, and adjust the video. Like images, videos can also use local file paths or external
+          URLs.
+        </p>
+        <p>Always include fallback text between the <code>&lt;video&gt;</code> tags for users whose browsers don't
+          support
+          HTML5 video.</p>
+        <div class="code-container">
+          <button class="copy-btn" data-target="step7">
+            <i class="fas fa-copy"></i>
+          </button>
+          <textarea readonly id="step7" class="code-block">
+<video src="https://jordan-bruno.github.io/html-cup-of-tea/assets/videos/Tea.mp4" width="320" height="240" controls>
+  Video not supported
+</video>
+            </textarea>
+        </div>
+      </article>
+    </section>
+
+    <section class="container my-4">
+      <article class="tutorial-step">
+        <h2>Final Example: Full Page</h2>
+        <p>Here’s the full example, bringing everything together into a single HTML page.</p>
+        <div class="code-container">
+          <button class="copy-btn" data-target="step8">
+            <i class="fas fa-copy"></i>
+          </button>
+          <textarea readonly id="step8" class="code-block">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Make a Cup of Tea</title>
+  </head>
+  <body>
     <h1>How to Make a Cup of Tea</h1>
 
     <div>
-        <h2>What You Need</h2>
-        <ul>
-            <li>Teabag</li>
-            <li>Kettle</li>
-            <li>Mug</li>
-            <li>Water</li>
-        </ul>
+      <h2>What You Need</h2>
+      <ul>
+        <li>Teabag</li>
+        <li>Kettle</li>
+        <li>Mug</li>
+        <li>Water</li>
+      </ul>
     </div>
 
     <div>
-        <h2>Steps</h2>
-        <ol>
-            <li>Boil the water</li>
-            <li>Put the teabag in the mug</li>
-            <li>Pour hot water into the mug</li>
-            <li>Let it brew, then remove the teabag</li>
-        </ol>
+      <h2>Steps</h2>
+      <ol>
+        <li>Boil the water</li>
+        <li>Put the teabag in the mug</li>
+        <li>Pour hot water into the mug</li>
+        <li>Let it brew, then remove the teabag</li>
+      </ol>
     </div>
 
     <p><strong>Tip:</strong> Add milk or sugar if you like.</p>
 
-    <img src="assets/images/Tea.jpg" alt="Cup of tea in a patterned mug" width="300" />
+    <img src="https://jordan-bruno.github.io/html-cup-of-tea/assets/images/Tea.jpg" alt="Cup of tea in a patterned mug" width="300" />
 
-    <video src="assets/videos/Tea.mp4" width="320" height="240" controls>
-        Video not supported
+    <video src="https://jordan-bruno.github.io/html-cup-of-tea/assets/videos/Tea.mp4" width="320" height="240" controls>
+      Video not supported
     </video>
 
+  </body>
+</html>
+            </textarea>
+        </div>
+      </article>
+    </section>
+
+    <!-- Completed Code Section -->
+    <section class="container text-center my-5">
+      <p>
+        You can find the <strong>full/completed code</strong> for this tutorial at
+        <a href="https://github.com/Jordan-Bruno/html-cup-of-tea" target="_blank" class="text-primary">
+          this GitHub file
+        </a>.
+      </p>
+      <hr>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="container text-center my-5">
+    <p>
+      This tutorial is part of the <strong>Digital Development Module</strong>.
+      The code examples were written by <strong>Jordan Bruno</strong>.
+    </p>
+    <p>
+      Visit additional module content on
+      <a href="https://github.com/Jordan-Bruno" target="_blank" class="text-primary">GitHub</a>.
+    </p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
 </body>
 
 </html>
